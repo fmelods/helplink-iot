@@ -1,4 +1,4 @@
 streamlit>=1.38
 pandas>=2.2
-oracledb>=2.0
 plotly>=5.20
+oracledb>=2.2
