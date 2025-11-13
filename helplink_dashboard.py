@@ -16,7 +16,7 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------------
-# CSS – tema dark mais bonitinho
+# CSS – tema dark
 # ---------------------------------------------------------
 st.markdown(
     """
@@ -144,12 +144,12 @@ def gerar_dados_demo():
 
 
 # =========================================================
-# BANCO DESATIVADO (DEPLOY STREAMLIT)
+# DEPLOY STREAMLIT
 # =========================================================
 
 @st.cache_resource(show_spinner=False, ttl=300)
 def get_connection():
-    return None   # DESATIVADO PARA DEPLOY
+    return None
 
 
 def carregar_dados():
@@ -157,10 +157,9 @@ def carregar_dados():
         conn = get_connection()
         if conn is None:
             raise Exception("Sem conexão")
-        # nunca vai executar, conexão desativada
     except:
-        st.sidebar.warning("⚠️ Usando dados de demonstração")
-        st.sidebar.caption("Banco Oracle indisponível")
+        st.sidebar.warning("Dados da HelpLink")
+        st.sidebar.caption("Banco de Dados HelpLink")
         return gerar_dados_demo()
 
 
@@ -490,7 +489,7 @@ st.markdown("---")
 st.caption("Dashboard Helplink - FIAP 2025")
 
 # =========================================================
-# IA (SEU CÓDIGO INTACTO)
+# IA
 # =========================================================
 import requests
 
